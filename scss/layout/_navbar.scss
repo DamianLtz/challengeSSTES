@@ -1,0 +1,60 @@
+.navbar {
+  border-bottom: 0.0625rem solid #2020205d;
+  .container {
+    .navbar__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .navbar__logo {
+        img {
+          width: 8rem;
+          height: auto;
+        }
+      }
+      .navbar__menu_btn {
+        width: 48px;
+        height: auto;
+      }
+      .navbar__menu {
+        position: relative;
+        .navbar__menu__options {
+          @media screen and (min-width: 576px) {
+            width: 308px;
+          }
+          display: block;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.35s ease-in-out;
+          position: absolute;
+          z-index: 10;
+          top: 32px;
+          right: 0;
+          background-color: $primary-white-color;
+          border-radius: 0.25rem;
+          width: 240px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          ul {
+            padding: 0.5rem;
+            li {
+              padding: 1rem 0.5rem;
+              &:hover {
+                background-color: $secondary-white-color;
+                border-radius: 0.25rem;
+              }
+              a {
+                display: block;
+                text-decoration: none;
+                color: $secondary-blue-color;
+              }
+            }
+          }
+        }
+        .menu-visible {
+          display: block;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

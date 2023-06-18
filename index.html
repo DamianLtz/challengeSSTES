@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Open+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Challenge Form</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- Preparando el proyecto para hacerlo sin BS. -->
+        <div class="container">
+          <div class="navbar__container">
+            <a class="navbar__logo" href="index.html"
+              ><img src="assets/img/logo_basico_nav.svg" alt="Logo de Logotipo"
+            /></a>
+            <div id="menu" class="navbar__menu">
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+            <div class="navbar__menu__options">
+              <ul>
+                <li><a href="#">Opción 1</a></li>
+                <li><a href="#">Opción 2</a></li>
+                <li><a href="#">Opción 3</a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container-fluid">
+      <section class="container section__form">
+        <h1 class="main__title">Registrate</h1>
+        <p class="main__subtitle">
+          Completá con los datos solicitados para poder ingresar.
+        </p>
+        <hr class="separator" />
+        <fieldset>
+          <form>
+            <div class="grid__form">
+              <div>
+                <label for="inputName" class="form__label"
+                  >Nombre<span aria-hidden="true"> *</span></label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  placeholder="Ejemplo: Carlo1234"
+                  id="inputName"
+                />
+              </div>
+              <div>
+                <label for="inputLastName" class="form__label"
+                  >Apellido<span aria-hidden="true"> *</span></label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  placeholder="Ejemplo: Carlo1234"
+                  id="inputLastName"
+                />
+              </div>
+              <div>
+                <label for="inputBirthDate" class="form__label"
+                  >Fecha de nacimiento</label
+                >
+                <input class="form__input" type="date" id="inputBirthDate" />
+              </div>
+              <div class="form__container__selectors">
+                <div>
+                  <label for="selector" class="form__label"
+                    >Selector<span aria-hidden="true"> *</span></label
+                  >
+                  <select name="selector" id="selector" class="form__input">
+                    <option value="opcion 1" selected spellcheck="true">Opcion 1</option>
+                    <option value="opcion 2">Opcion 2</option>
+                    <option value="opcion 3">Opcion 3</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="inputNumber" class="form__label"
+                    >Selector de número</label
+                  >
+                  <input
+                    class="form__input"
+                    id="inputNumber"
+                    type="number"
+                    value="0"
+                  />
+                </div>
+              </div>
+            </div>
+            <h2 class="form__title__direction">Dirección personal</h2>
+            <div class="grid__form">
+              <div>
+                <label for="" class="form__label"
+                  >Dirección<span aria-hidden="true"> *</span></label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  placeholder="Ejemplo: Carlo1234"
+                />
+              </div>
+              <div>
+                <label for="" class="form__label"
+                  >Localidad<span aria-hidden="true"> *</span></label
+                >
+                <input
+                  class="form__input"
+                  type="text"
+                  placeholder="Ejemplo: Carlo1234"
+                />
+              </div>
+              <div>
+                <label for="" class="form__label"
+                  >Selector de número<span aria-hidden="true"> *</span></label
+                >
+                <input class="form__input" type="number" value="0" />
+              </div>
+            </div>
+            <div class="form__terms">
+              <label for="inputCheckbox"
+                >Acepto las Políticas de privacidad & aviso legal<span aria-hidden="true"> *</span></label
+              >
+              <input type="checkbox" id="inputCheckbox" />
+            </div>
+            <div class="form__buttons">
+              <button class="btn btn__return">Volver</button>
+              <button class="btn btn__register">Registrate</button>
+            </div>
+          </form>
+        </fieldset>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__container__social__media">
+          <img
+            src="assets/img/logo_basico_footer.svg"
+            alt="Logo de Logotipo"
+            class="img-fluid footer__logo"
+            aria-label="Logo oficial de Logotipo"
+          />
+          <ul class="footer__social__media">
+            <li>
+              <a href="#" target="_blank"
+                ><img
+                  src="assets/icons/facebook.svg"
+                  alt="Ir a facebook"
+                  class="social__media__icon"
+                  aria-label="Icono de Facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img
+                  src="assets/icons/twitter.svg"
+                  alt="Ir a Twitter"
+                  class="social__media__icon"
+                  aria-label="Icono de Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img
+                  src="assets/icons/instagram.svg"
+                  alt="Ir a Instagram"
+                  class="social__media__icon"
+                  aria-label="Icono de Instagram"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img
+                  src="assets/icons/youtube.svg"
+                  alt="Ir a Youtube"
+                  class="social__media__icon"
+                  aria-label="Icono de Youtube"
+              /></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><img
+                  src="assets/icons/rrss.svg"
+                  alt="Suscribirse a nuestro RRSS"
+                  class="social__media__icon"
+                  aria-label="Icono de canal RRSS"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <hr class="separator" />
+        <div class="footer__container__social__media">
+          <img
+            src="assets/img/logo_basico_footer.svg"
+            alt="Logo de Logotipo"
+            class="img-fluid footer__logo"
+            aria-label="Logo oficial de Logotipo"
+          />
+          <ul class="footer__container__links">
+            <li><a href="#">Boletín oficial</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Politica de privacidad</a></li>
+            <li><a href="#">Oficios judiciales</a></li>
+            <li><a href="#">Danos tu opinión</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
+  </body>
+</html>
