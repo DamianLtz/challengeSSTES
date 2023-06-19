@@ -1,6 +1,7 @@
 .section__form {
   @media screen and (min-width: 991px) {
-    padding: 2rem;
+    padding: 3.375rem 3.8125rem;
+    margin: 2rem auto 9.5rem auto;
   }
   background-color: $primary-white-color;
   margin: 2rem auto;
@@ -9,7 +10,7 @@
   border: 0.0625rem solid $border-primary-color;
   .separator {
     margin: 1rem 0;
-    opacity: 0.5;
+    opacity: 0.3;
   }
   .main__title {
     font-family: $primary-font-family;
@@ -29,18 +30,25 @@ form {
   }
   .form__title__direction {
     font-family: $primary-font-family;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    @media screen and (min-width: 991px) {
+      padding: 4rem 0 2.25rem 0;
+    }
   }
   .form__container__selectors {
+    @media screen and (min-width: 991px) {
+      flex-direction: row;
+      align-items: center;
+    }
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 1.25rem;
   }
 
   div {
     .form__label {
       font-size: 0.8125rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
     }
 
     .form__input {
@@ -58,15 +66,27 @@ form {
     }
     input[type="text"],
     input[type="date"] {
+      // width: calc(100% - 2rem);
       width: 100%;
     }
     select[name="selector"] {
-      width: 179px;
+      @media screen and (min-width: 991px) {
+        width: 179px;
+      }
+      // width: calc(100% - 2rem);
+      width: 100%;
     }
     input[type="number"] {
-      width: 82px;
+      @media screen and (min-width: 991px) {
+        width: 82px;
+      }
+      // width: calc(100% - 2rem);
+      width: 100%;
     }
-    input[type="text"],input[type="date"],input[type="number"],select[name="selector"]{
+    input[type="text"],
+    input[type="date"],
+    input[type="number"],
+    select[name="selector"] {
       background-color: $secondary-white-color;
     }
   }
@@ -74,6 +94,9 @@ form {
     display: flex;
     align-items: center;
     padding: 2rem 0;
+    @media screen and (min-width: 991px) {
+      padding: 4rem 0;
+    }
     label {
       @media screen and (min-width: 991px) {
         font-size: 1rem;

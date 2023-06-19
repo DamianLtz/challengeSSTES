@@ -1,7 +1,7 @@
 .footer {
   background-color: $primary-black-color;
   .container {
-    .footer__container__social__media {
+    .container__social__media {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -11,7 +11,7 @@
       .footer__logo {
         width: 9.9375rem;
       }
-      .footer__social__media {
+      .social__media__list {
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -30,12 +30,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-evenly;
         gap: 1.25rem;
         li {
           a {
             color: $primary-white-color;
             font-size: 0.875rem;
+            font-weight: 600;
           }
         }
         @media screen and (min-width: 991px) {
