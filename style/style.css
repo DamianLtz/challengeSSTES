@@ -102,6 +102,9 @@ label {
     padding: 1.5rem 0 1rem 0;
   }
 }
+.navbar .container {
+  padding: 0;
+}
 .navbar .container .navbar__container {
   display: flex;
   justify-content: space-between;
@@ -172,7 +175,7 @@ label {
 @media screen and (min-width: 991px) {
   .section__form {
     padding: 3.375rem 3.8125rem;
-    margin: 2rem auto 9.5rem auto;
+    margin: 4.1875rem auto 9.5rem auto;
   }
 }
 .section__form .separator {
@@ -192,13 +195,21 @@ form .grid__form {
   grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
   gap: 1rem;
 }
+form .separator__spacing {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 991px) {
+  form .separator__spacing {
+    margin-top: 2rem;
+  }
+}
 form .form__title__direction {
   font-family: "Nunito", sans-serif;
-  padding: 1rem 0;
+  padding-top: 2rem;
 }
 @media screen and (min-width: 991px) {
   form .form__title__direction {
-    padding: 4rem 0 2.25rem 0;
+    padding-top: 4rem;
   }
 }
 form .form__container__selectors {
@@ -218,10 +229,11 @@ form div .form__label {
 }
 form div .form__input {
   color: #353535;
-  padding: 0.5rem 0.8125rem;
+  padding: 0.8125rem;
   border-radius: 0.25rem;
   border: 0.0625rem solid #8a98a8;
   outline: none;
+  font-size: 1rem;
 }
 form div .form__input:focus-visible {
   border: 0.0625rem solid #8a98a8;
@@ -232,11 +244,20 @@ form div .form__input::-moz-placeholder {
 form div .form__input::placeholder {
   color: #8a98a8;
 }
-form div input[type=text],
-form div input[type=date] {
+form div input[type=text] {
   width: 100%;
 }
+form div input[type=date] {
+  max-width: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 991px) {
+  form div input[type=date] {
+    max-width: 256px;
+  }
+}
 form div select[name=selector] {
+  color: #8a98a8;
   width: 100%;
 }
 @media screen and (min-width: 991px) {
@@ -244,12 +265,15 @@ form div select[name=selector] {
     width: 179px;
   }
 }
+form div select[name=selector] :not(option[selected]) {
+  color: #333333;
+}
 form div input[type=number] {
   width: 100%;
 }
 @media screen and (min-width: 991px) {
   form div input[type=number] {
-    width: 82px;
+    width: 154px;
   }
 }
 form div input[type=text],
@@ -257,6 +281,42 @@ form div input[type=date],
 form div input[type=number],
 form div select[name=selector] {
   background-color: #f3f6f9;
+}
+form div input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+form div select[name=selector] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+form div .container__input {
+  position: relative;
+}
+form div .container__input .chevron-down {
+  position: absolute;
+  bottom: 10px;
+  right: 13px;
+  pointer-events: none;
+}
+form div .container__input .chevron-down img {
+  width: 16px;
+  height: 16px;
+}
+form div .container__input .calendar__icon {
+  position: absolute;
+  bottom: 11px;
+  right: 16px;
+  pointer-events: none;
+}
+@media screen and (min-width: 991px) {
+  form div .container__input .calendar__icon {
+    right: 87px;
+  }
+}
+form div .container__input .calendar__icon img {
+  width: 16px;
+  height: 16px;
 }
 form .form__terms {
   display: flex;
@@ -283,12 +343,14 @@ form .form__terms input[type=checkbox] {
 }
 form .form__buttons {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 @media screen and (min-width: 576px) {
   form .form__buttons {
     justify-content: flex-end;
+    flex-direction: row;
   }
 }
 form .form__buttons .btn {
@@ -300,6 +362,13 @@ form .form__buttons .btn {
   font-size: 1.125rem;
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+@media screen and (min-width: 991px) {
+  form .form__buttons .btn {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 form .form__buttons .btn__return {
   background-color: #5c6a7a;
@@ -330,6 +399,7 @@ form .form__buttons .btn__register {
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 3rem;
+  padding-top: 2rem;
 }
 .footer .container .container__social__media .social__media__list li a .social__media__icon {
   width: 1.5rem;
@@ -340,6 +410,7 @@ form .form__buttons .btn__register {
   flex-direction: column;
   align-items: center;
   gap: 1.25rem;
+  padding-top: 1.5rem;
 }
 .footer .container .container__social__media .footer__container__links li a {
   color: #ffffff;

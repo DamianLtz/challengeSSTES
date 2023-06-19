@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style/style.css" />
+    <meta name="description" content="Challenge de maquetado de SSTES" />
     <title>Form Challenge</title>
   </head>
   <body>
@@ -79,7 +80,7 @@
                   aria-labelledby="inputLastName"
                 />
               </div>
-              <div>
+              <div class="container__input">
                 <label for="inputBirthDate" class="form__label"
                   >Fecha de nacimiento</label
                 >
@@ -89,19 +90,22 @@
                   id="inputBirthDate"
                   aria-labelledby="inputBirthDate"
                 />
+                <span class="calendar__icon"><img src="assets/icons/calendar2-week.svg" alt=""></span>
               </div>
               <div class="form__container__selectors">
-                <div>
+                <div class="container__input">
                   <label for="selector" class="form__label"
                     >Selector<span aria-hidden="true"> *</span></label
                   >
                   <select name="selector" id="selector" class="form__input">
-                    <option value="opcion 1" selected spellcheck="true">
-                      Opcion 1
-                    </option>
+                    <option selected>Seleccionar</option>
+                    <option value="opcion 1">Opcion 1</option>
                     <option value="opcion 2">Opcion 2</option>
                     <option value="opcion 3">Opcion 3</option>
                   </select>
+                  <span class="chevron-down"
+                    ><img src="assets/icons/caret-down.svg" alt=""
+                  /></span>
                 </div>
                 <div>
                   <label for="inputNumber" class="form__label"
@@ -118,7 +122,8 @@
               </div>
             </div>
             <h2 class="form__title__direction">Dirección personal</h2>
-            <div class="grid__form">
+            <hr class="separator" />
+            <div class="grid__form separator__spacing">
               <div>
                 <label for="inputDirection" class="form__label"
                   >Dirección<span aria-hidden="true"> *</span></label
@@ -171,8 +176,10 @@
               />
             </div>
             <div class="form__buttons">
-              <button class="btn btn__return">Volver</button>
-              <button class="btn btn__register">Registrate</button>
+              <button class="btn btn__return" type="button">Volver</button>
+              <button class="btn btn__register" type="submit">
+                Registrate
+              </button>
             </div>
           </form>
         </fieldset>

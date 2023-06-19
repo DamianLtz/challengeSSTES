@@ -1,17 +1,19 @@
 .section__form {
   @media screen and (min-width: 991px) {
     padding: 3.375rem 3.8125rem;
-    margin: 2rem auto 9.5rem auto;
+    margin: 4.1875rem auto 9.5rem auto;
   }
   background-color: $primary-white-color;
   margin: 2rem auto;
   padding: 0.75rem;
   border-radius: 0.5rem;
   border: 0.0625rem solid $border-primary-color;
+
   .separator {
     margin: 1rem 0;
     opacity: 0.3;
   }
+
   .main__title {
     font-family: $primary-font-family;
   }
@@ -28,13 +30,22 @@ form {
     grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
     gap: 1rem;
   }
+
+  .separator__spacing {
+    @media screen and (min-width: 991px) {
+      margin-top: 2rem;
+    }
+    margin-top: 1rem;
+  }
+
   .form__title__direction {
     font-family: $primary-font-family;
-    padding: 1rem 0;
+    padding-top: 2rem;
     @media screen and (min-width: 991px) {
-      padding: 4rem 0 2.25rem 0;
+      padding-top: 4rem;
     }
   }
+
   .form__container__selectors {
     @media screen and (min-width: 991px) {
       flex-direction: row;
@@ -53,10 +64,11 @@ form {
 
     .form__input {
       color: #353535;
-      padding: 0.5rem 0.8125rem;
+      padding: 0.8125rem;
       border-radius: 0.25rem;
       border: 0.0625rem solid $secondary-black-color;
       outline: none;
+      font-size: 1rem;
       &:focus-visible {
         border: 0.0625rem solid $secondary-black-color;
       }
@@ -64,32 +76,84 @@ form {
         color: $secondary-black-color;
       }
     }
-    input[type="text"],
-    input[type="date"] {
+
+    input[type="text"] {
       // width: calc(100% - 2rem);
       width: 100%;
     }
+
+    input[type="date"] {
+      @media screen and (min-width: 991px) {
+        max-width: 256px;
+      }
+      max-width: 100%;
+      width: 100%;
+    }
+
     select[name="selector"] {
+      color: $secondary-black-color;
       @media screen and (min-width: 991px) {
         width: 179px;
       }
-      // width: calc(100% - 2rem);
       width: 100%;
+      :not(option[selected]) {
+        color: $primary-black-color;
+      }
     }
+
     input[type="number"] {
       @media screen and (min-width: 991px) {
-        width: 82px;
+        width: 154px;
       }
-      // width: calc(100% - 2rem);
       width: 100%;
     }
+
     input[type="text"],
     input[type="date"],
     input[type="number"],
     select[name="selector"] {
       background-color: $secondary-white-color;
     }
+
+    input[type="date"] {
+      &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+      }
+    }
+
+    select[name="selector"] {
+      appearance: none;
+    }
+
+    .container__input {
+      position: relative;
+      .chevron-down {
+        position: absolute;
+        bottom: 10px;
+        right: 13px;
+        pointer-events: none;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .calendar__icon {
+        position: absolute;
+        bottom: 11px;
+        right: 16px;
+        @media screen and (min-width: 991px) {
+          right: 87px;
+        }
+        pointer-events: none;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
   }
+
   .form__terms {
     display: flex;
     align-items: center;
@@ -109,11 +173,14 @@ form {
       accent-color: #0d6efd;
     }
   }
+
   .form__buttons {
     @media screen and (min-width: 576px) {
       justify-content: flex-end;
+      flex-direction: row;
     }
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     .btn {
@@ -125,11 +192,17 @@ form {
       font-size: 1.125rem;
       font-weight: 600;
       font-family: $secondary-font-family;
+      width: 100%;
+      @media screen and (min-width: 991px) {
+        width: fit-content;
+      }
     }
+
     .btn__return {
       background-color: $button-return-color;
       color: $primary-white-color;
     }
+    
     .btn__register {
       background-color: $button-success-color;
       color: $secondary-blue-color;
