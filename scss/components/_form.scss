@@ -137,14 +137,17 @@ form {
           height: 16px;
         }
       }
-
+    }
+    .container__calendar {
+      position: relative;
+      max-width: 100%;
+      @media screen and (min-width: 991px) {
+        max-width: 256px;
+      }
       .calendar__icon {
         position: absolute;
         bottom: 11px;
-        right: 16px;
-        @media screen and (min-width: 991px) {
-          right: 87px;
-        }
+        right: 20px;
         pointer-events: none;
         img {
           width: 16px;
@@ -202,7 +205,7 @@ form {
       background-color: $button-return-color;
       color: $primary-white-color;
     }
-    
+
     .btn__register {
       background-color: $button-success-color;
       color: $secondary-blue-color;
